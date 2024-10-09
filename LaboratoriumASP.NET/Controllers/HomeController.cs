@@ -33,33 +33,47 @@ public class HomeController : Controller
      * Zadanie 1
      */
 
-    public IActionResult Calculator(int q)
+    public IActionResult Calculator(Operation? op, double? x, double? y)
     {
-        var op = Request.Query["op"];
-        var x = double.Parse(Request.Query["x"]);
-        var y = double.Parse(Request.Query["y"]);
-
-        var result = 0.0d;
+        //var op = Request.Query["op"];
+        //var x = double.Parse(Request.Query["x"]);
+        //var y = double.Parse(Request.Query["y"]);
+        
+        //Validacja 
+        if(x is null || y is null)
+        {
+            ViewBag.ErrorMessege = "Nie podano wszystkich parametrów";
+            return View("ErrorCalculator");
+        }
+        
+        if(op is null)
+        {
+            ViewBag.ErrorMessege = "Niepoprawny operator";
+            return View("ErrorCalculator");
+        }
+        
+        double? result = 0.0d;
 
         switch (op)
         {
-            case "add":
+            case Operation.Add:
                 result = x + y;
                 ViewBag.Operator = " + ";
                 break;
-            case "sub":
+            case Operation.Sub:
                 result = x - y;
                 ViewBag.Operator = " - ";
                 break;
-            case "mul":
+            case Operation.Mul:
                 result = x * y;
                 ViewBag.Operator = " * ";
                 break;
-            case "div":
+            case Operation.Div:
                 result = x / y;
                 ViewBag.Operator = " / ";
                 break;
         }
+        
 
         ViewBag.Result = result;
         ViewBag.X = x;
@@ -67,6 +81,8 @@ public class HomeController : Controller
 
         return View();
     }
+    
+    
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()
@@ -74,3 +90,17 @@ public class HomeController : Controller
         return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
     }
 }
+
+public enum Operation
+{
+    Add,
+    Sub,
+    Mul,
+    Div
+}
+
+/*
+ * zadanie DOMOWE
+ * Napisz metode Age, ktora przyjmie date urodzenia i zwróci wiek
+ * w latach, miesiacach i dniach
+ */
