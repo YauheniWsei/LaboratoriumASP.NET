@@ -6,4 +6,10 @@
         <ImplicitUsings>enable</ImplicitUsings>
     </PropertyGroup>
 
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="Views\Contact\Add.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Contact\Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Contact\Index.cshtml" />
+    </ItemGroup>
+
 </Project>
