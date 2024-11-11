@@ -12,4 +12,8 @@
       <_ContentIncludedByDefault Remove="Views\Contact\Index.cshtml" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="Pages\" />
+    </ItemGroup>
+
 </Project>

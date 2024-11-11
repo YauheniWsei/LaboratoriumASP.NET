@@ -1,4 +1,4 @@
-@model CalculatorModel
+@model Birth
 
 @{
     Layout = null;
@@ -12,7 +12,7 @@
 </head>
 <body>
 <div>
-      <h3>@ViewBag.Komunikat @ViewBag.a @ViewBag.op @ViewBag.b = @ViewBag.Result</h3>
+      <h3>Hejka, @Model.Name! Masz @Model.GetAge() lat</h3>
 </div>
 </body>
 </html>

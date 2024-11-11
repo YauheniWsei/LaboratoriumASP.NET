@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>title</title>
+</head>
+<body>
+
+<div>
+    <div class="container">
+        <div class="row justify-content-md-center">
+            <div class="col-6">
+                <h2>Birth counter</h2>
+                <form action="BirthResult" method="POST">
+                    <div class="mb-3">
+                        <label class="form-label" for="name">Imie</label>
+                        <input class="form-control" type="text" name="name" id="name"/>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label" for="data">Data</label>
+                        <input type="date" id="data" name="date"/>
+                    </div>
+                    <div class="mb-3">
+                        <button class="btn btn-primary" type="submit">Oblicz</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--tutaj nie pozwalam ustawic daty przyszlej 
+aby uzytkownik nie mogl zmienic kodu zrodłowego i wpisac daty przyszlej 
+warto dodac jeszcze walidacje na serwerze-->
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const today = new Date();
+        const maxDate = today.toISOString().split('T')[0];
+        const dateInput = document.getElementById("data");
+
+        if (dateInput) {
+            dateInput.setAttribute("max", maxDate);
+        } else {
+            console.error("Element with id 'data' not found");
+        }
+    });
+</script>
+
+</body>
+</html>

@@ -17,7 +17,8 @@ public class HomeController : Controller
     {
         return View();
     }
-
+    
+    //Zadanie domowe
     public IActionResult Age(int m, int d, int y)
     {
         DateTime today = DateTime.Today;
@@ -29,33 +30,8 @@ public class HomeController : Controller
         return View();
     }
     
-    public IActionResult Calculator(Operator op, double a, double b)
+    public IActionResult Calculator()
     {
-        ViewBag.Komunikat = "Wynik działania: ";
-        if(a == 0 || b == 0)
-        {
-            ViewBag.Komunikat = "Podaj liczby w zapytaniu!";
-            return View();
-        }
-        switch (op)
-        {
-            case Operator.add:
-                ViewBag.result = a + b;
-                break;
-            case Operator.sub:
-                ViewBag.result = a - b;
-                break;
-            case Operator.mul:
-                ViewBag.result = a * b;
-                break;
-            case Operator.div:
-                ViewBag.result = a / b;
-                break;
-        }
-        
-        ViewBag.a = a;
-        ViewBag.b = b;
-        ViewBag.op = op;
         return View();
     }
 
@@ -68,10 +44,5 @@ public class HomeController : Controller
     public IActionResult Error()
     {
         return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-    }
-    
-    public enum Operator
-    {
-        add, sub, mul, div
     }
 }
