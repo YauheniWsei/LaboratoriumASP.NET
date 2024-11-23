@@ -9,20 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="261b3784-730d-45fc-964b-4b89311869de" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Data/Entities/ContactEntity.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LaboratoriumASP.NET/Views/Komputer/CreateForm.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LaboratoriumASP.NET/Views/Komputer/Details.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LaboratoriumASP.NET/Views/Komputer/Edit.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LaboratoriumASP.NET/Views/Komputer/Index.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.LaboratoriumASP.NET/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LaboratoriumASP.NET/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LaboratoriumASP.NET/Controllers/KomputerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LaboratoriumASP.NET/Controllers/KomputerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LaboratoriumASP.NET/LaboratoriumASP.NET.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/LaboratoriumASP.NET/LaboratoriumASP.NET.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LaboratoriumASP.NET/Models/Komputer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LaboratoriumASP.NET/Models/Komputer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LaboratoriumASP.NET/Views/Komputer/Create.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/LaboratoriumASP.NET/Views/Komputer/Delete.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LaboratoriumASP.NET/Views/Shared/_Layout.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/LaboratoriumASP.NET/Views/Shared/_Layout.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LaboratoriumASP.NET/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/LaboratoriumASP.NET/appsettings.json" afterDir="false" />
-    </list>
+    <list default="true" id="261b3784-730d-45fc-964b-4b89311869de" name="Changes" comment="lab4 + zadania" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -39,17 +26,18 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    ".NET Launch Settings Profile.Unnamed.executor": "Run",
-    "git-widget-placeholder": "lab4",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;.NET Launch Settings Profile.Unnamed.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;lab4&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="Unnamed" type="LaunchSettings" factoryName=".NET Launch Settings Profile" nameIsGenerated="true">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/LaboratoriumASP.NET/LaboratoriumASP.NET.csproj" />
@@ -68,7 +56,21 @@
     </configuration>
   </component>
   <component name="TaskManager">
+    <task id="LOCAL-00001" summary="lab4 + zadania">
+      <option name="closed" value="true" />
+      <created>1732402086870</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1732402086870</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="lab4 + zadania" />
+    <option name="LAST_COMMIT_MESSAGE" value="lab4 + zadania" />
+  </component>
 </project>
