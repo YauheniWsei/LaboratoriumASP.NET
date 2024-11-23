@@ -1,0 +1,60 @@
+@model Komputer
+
+@{
+    
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Szczegóły komputera</title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #ccc;
+            text-align: left;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <h2>Szczegóły komputera</h2>
+
+    <table>
+        <tr>
+            <th>Producent</th>
+            <td>@Model.Producent</td>
+        </tr>
+        <tr>
+            <th>Model</th>
+            <td>@Model.Nazwa</td>
+        </tr>
+        <tr>
+            <th>CPU</th>
+            <td>@Model.Cpu</td>
+        </tr>
+        <tr>
+            <th>RAM</th>
+            <td>@Model.Ram</td>
+        </tr>
+        <tr>
+            <th>Karta graficzna</th>
+            <td>@Model.Gpu</td>
+        </tr>
+        <tr>
+            <th>Data produkcji</th>
+            <td>@Model.DataProdukcji.ToString("yyyy-MM-dd")</td>
+        </tr>
+    </table>
+
+    <a href="@Url.Action("Index", "Komputer")" class="btn btn-secondary">Wróć do listy</a>
+</div>
+
+</body>
+</html>

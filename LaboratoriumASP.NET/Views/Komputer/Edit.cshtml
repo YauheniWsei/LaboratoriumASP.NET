@@ -1,0 +1,54 @@
+@model Komputer
+
+@{
+    
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>EditComp</title>
+    
+</head>
+<body>
+<div>
+    <h2>Edytuj komputer</h2>
+
+    <form asp-action="Edit" asp-controller="Komputer" method="post">
+        <input type="hidden" asp-for="Id" />
+        <div>
+            <label asp-for="Producent"></label>
+            <input asp-for="Producent" />
+            <span asp-validation-for="Producent"></span>
+        </div>
+        <div>
+            <label asp-for="Nazwa"></label>
+            <input asp-for="Nazwa" />
+            <span asp-validation-for="Nazwa"></span>
+        </div>
+        <div>
+            <label asp-for="Cpu"></label>
+            <input asp-for="Cpu" />
+            <span asp-validation-for="Cpu"></span>
+        </div>
+        <div>
+            <label asp-for="Ram"></label>
+            <input asp-for="Ram" />
+            <span asp-validation-for="Ram"></span>
+        </div>
+        <div>
+            <label asp-for="Gpu"></label>
+            <input asp-for="Gpu" />
+            <span asp-validation-for="Gpu"></span>
+        </div>
+        <div>
+            <label asp-for="DataProdukcji"></label>
+            <input asp-for="DataProdukcji" type="date" />
+            <span asp-validation-for="DataProdukcji"></span>
+        </div>
+        <button type="submit">Zapisz</button>
+    </form>
+</div>
+</body>
+</html>

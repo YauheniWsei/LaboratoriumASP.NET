@@ -28,6 +28,8 @@ public class Komputer
     public string Gpu {get; set;}
     
     [DataType(DataType.Date)]
-    public DateTime DataProdukcji {get; set;}
+    public DateOnly DataProdukcji {get; set;}
+    
+    
     
 }
