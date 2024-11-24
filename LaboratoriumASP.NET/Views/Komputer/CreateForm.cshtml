@@ -15,46 +15,53 @@
     <form asp-action="CreateForm" asp-controller="Komputer" method="post">
         <div asp-validation-summary="All"></div>
         <div>
-            <label asp-for="Producent">Producent:</label>
+            <label asp-for="Producent"></label>
             <div>
                 <span asp-validation-for="Producent" class="text-danger"></span>
             </div>
             <input class="form-control" type="text" asp-for="Producent"/>
         </div>
         <div>
-            <label asp-for="Nazwa">Model:</label>
+            <label asp-for="Nazwa"></label>
             <div>
                 <span asp-validation-for="Nazwa" class="text-danger"></span>
             </div>
             <input class="form-control" type="text" asp-for="Nazwa"/>
         </div>
         <div>
-            <label asp-for="Cpu">CPU:</label>
+            <label asp-for="Cpu"></label>
             <div>
                 <span asp-validation-for="Cpu" class="text-danger"></span>
             </div>
             <input class="form-control" type="text" asp-for="Cpu"/>
         </div>
         <div>
-            <label asp-for="Ram">Pamięć RAM:</label>
+            <label asp-for="Ram"></label>
             <div>
                 <span asp-validation-for="Ram" class="text-danger"></span>
             </div>
             <input class="form-control" type="text" asp-for="Ram"/>
         </div>
         <div>
-            <label asp-for="Gpu">Karta graficzna:</label>
+            <label asp-for="Gpu"></label>
             <div>
                 <span asp-validation-for="Gpu" class="text-danger"></span>
             </div>
             <input class="form-control" type="text" asp-for="Gpu"/>
         </div>
         <div>
-            <label asp-for="DataProdukcji">Data produkcji:</label>
+            <label asp-for="DataProdukcji"></label>
             <div>
                 <span asp-validation-for="DataProdukcji" class="text-danger"></span>
             </div>
             <input class="form-control" type="date" asp-for="DataProdukcji"/>
+        </div>
+        <div>
+            <label asp-for="Priority"></label>
+            <div>
+                <span asp-validation-for="Priority" class="text-danger"></span>
+            </div>
+            <select class="form-control" asp-for="Priority" asp-items="@Html.GetEnumSelectList<Priority>()"></select>
         </div>
     <button type="submit">Zapisz</button>
     </form>

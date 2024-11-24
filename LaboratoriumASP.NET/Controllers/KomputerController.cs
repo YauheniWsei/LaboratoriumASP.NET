@@ -87,7 +87,7 @@ public class KomputerController : Controller
     
     public IActionResult Index()
     {
-        return View(_komputers);
+        return View(_komputers.Values.ToList());
     }
 
     [HttpPost]

@@ -51,6 +51,10 @@
             <th>Data produkcji</th>
             <td>@Model.DataProdukcji.ToString("yyyy-MM-dd")</td>
         </tr>
+        <tr>
+            <th>Priorytet</th>
+            <td>@Model.Priority</td>
+        </tr>
     </table>
 
     <a href="@Url.Action("Index", "Komputer")" class="btn btn-secondary">Wróć do listy</a>

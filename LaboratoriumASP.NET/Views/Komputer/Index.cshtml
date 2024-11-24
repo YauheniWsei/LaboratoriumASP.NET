@@ -1,70 +1,81 @@
-@model Dictionary<int, Komputer>
+@model List<Komputer>
+
+@using System.ComponentModel.DataAnnotations
 
 @{
-    
+
 }
 
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Index</title>
+    <title>Lista komputerów</title>
     <style>
         table {
-            border-collapse: collapse; 
+            border-collapse: collapse;
         }
         th, td {
-            padding: 10px; 
-            border: 1px solid #ccc; 
-            text-align: left; 
+            padding: 10px;
+            border: 1px solid #ccc;
+            text-align: left;
         }
         th {
-            background-color: #f4f4f4; 
+            background-color: #f4f4f4;
         }
     </style>
-    
 </head>
 <body>
 <div>
     <h2>Lista komputerów</h2>
 
+    @if (Model != null && Model.Count > 0)
+    {
     <table>
         <tr>
-            <th>Producent</th>
-            <th>CPU</th>
-            <th>RAM</th>
-            <th>Karta graficzna</th>
-            <th>Data produkcji</th>
+            <th>@Html.DisplayNameFor(model => model[0].Producent)</th>
+            <th>@Html.DisplayNameFor(model => model[0].Cpu)</th>
+            <th>@Html.DisplayNameFor(model => model[0].Ram)</th>
+            <th>@Html.DisplayNameFor(model => model[0].Gpu)</th>
+            <th>@Html.DisplayNameFor(model => model[0].DataProdukcji)</th>
+            <th>@Html.DisplayNameFor(model => model[0].Priority)</th>
+            <th>Akcje</th>
         </tr>
         @foreach (var item in Model)
         {
         <tr>
-            <td>@item.Value.Producent</td>
-            <td>@item.Value.Cpu</td>
-            <td>@item.Value.Ram</td>
-            <td>@item.Value.Gpu</td>
-            <td>@item.Value.DataProdukcji</td>
+            <td>@item.Producent</td>
+            <td>@item.Cpu</td>
+            <td>@item.Ram</td>
+            <td>@item.Gpu</td>
+            <td>@item.DataProdukcji.ToString("yyyy-MM-dd")</td>
+            <td>@item.Priority.GetDisplayName()</td>
             <td>
                 <a class="btn btn-primary"
                    asp-action="Edit"
                    asp-controller="Komputer"
-                   asp-route-id=@item.Key>Edytuj</a>
+                   asp-route-id="@item.Id">Edytuj</a>
                 <a class="btn btn-primary"
                    asp-action="Details"
                    asp-controller="Komputer"
-                   asp-route-id=@item.Key>Szczegóły</a>
-                <a class="btn btn-primary"
+                   asp-route-id="@item.Id">Szczegóły</a>
+                <a class="btn btn-danger"
                    asp-action="Delete"
                    asp-controller="Komputer"
-                   asp-route-id=@item.Value.Id>Usuń</a>
+                   asp-route-id="@item.Id">Usuń</a>
             </td>
         </tr>
         }
-        <tr>
-            <a class="btn btn-primary"
-               asp-action="CreateForm"
-               asp-controller="Komputer">Dodaj nowy komputer</a>
-        </tr>
     </table>
+    }
+    else
+    {
+    <p>Brak dostępnych komputerów.</p>
+    }
+    <div>
+        <a class="btn btn-success"
+           asp-action="CreateForm"
+           asp-controller="Komputer">Dodaj nowy komputer</a>
+    </div>
 </div>
 </body>
 </html>
